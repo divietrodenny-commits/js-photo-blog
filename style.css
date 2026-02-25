@@ -48,6 +48,20 @@ body {
   position: relative;
 }
 
+.polaroid_inner::before {
+  content: "";
+  position: absolute;
+  top: -6px;                    
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;                   
+  height: 30px;
+  background-image: url("img/pin.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .polaroid_img {
   display: block;
   width: 100%;
