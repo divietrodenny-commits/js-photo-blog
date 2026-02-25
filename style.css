@@ -30,19 +30,21 @@ body {
   padding: 20px 0 40px;
 }
 
-.board_container {
+/* 
+.container {
   width: 100%;
   max-width: 420px;
-  margin: 0 auto;          
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
+*/
 
 .polaroid_inner {
   background-color: white;
-  width: 320px;
-  margin: 40px auto 0;    
+  max-width: 320px;
+  margin: 40px auto 0;
   padding: 20px 20px 30px;
   border-radius: 4px;
   position: relative;
@@ -51,10 +53,10 @@ body {
 .polaroid_inner::before {
   content: "";
   position: absolute;
-  top: -6px;                    
+  top: -6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;                   
+  width: 30px;
   height: 30px;
   background-image: url("img/pin.svg");
   background-size: contain;
