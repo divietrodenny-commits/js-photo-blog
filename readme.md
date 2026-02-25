@@ -16,8 +16,8 @@ Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfrut
 
 Font utilizzati:
 
-titoli:  ‘Edu Tas Beginner’, sans-serif;d
-ate: ‘Sometype Mono’, ‘monospace’;
+titoli:  ‘Edu Tas Beginner’, sans-serif;
+date: ‘Sometype Mono’, ‘monospace’;
 (Dovreste sapere a questo punto cosa e come prendere da Google Fonts… )
 
 Bonus
@@ -27,3 +27,6 @@ rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano
 |||
 
 creare base html con una prima card e i vari collegamenti, simulare lo screen con css.
+
+richiesta dei dati API, funzione per generare card + render delle card
+tools: fetch, .then, .catch, foreach, queryselector, innerhtml ??

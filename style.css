@@ -1,37 +1,38 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Sometype Mono", monospace;
+    font-family: "Sometype Mono", monospace;
 }
 
 .top_bar {
-  text-align: center;
-  padding: 30px;
-  background-image: url("img/wall.png");
-  font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    background-image: url("img/wall.png");
+    font-weight: bold;
 }
 
 .top_bar h1 {
-  font-family: "Edu TAS Beginner", sans-serif;
-  font-weight: 600;
-  font-size: 3rem;
-  letter-spacing: 3px;
+    font-family: "Edu TAS Beginner", sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: 3px;
+
 }
 
 .board {
-  min-height: 100vh;
-  background-image: url("img/cork.png");
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
+    min-height: 100vh;
+    background-image: url("img/cork.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
 }
 
 .board .row {
-  margin-top: 10px;   
+    margin-top: 10px;
 }
 
 /* 
@@ -46,31 +47,50 @@ body {
 */
 
 .polaroid_inner {
-  background-color: white;
-  max-width: 320px;
-  margin: 0px auto 0;
-  padding: 20px 20px 30px;
-  position: relative;
+    background-color: white;
+    max-width: 320px;
+    margin: 0 auto 0;
+    padding: 20px 20px 5px;
+    position: relative;
 }
 
 .polaroid_inner::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  background-image: url("img/pin.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url("img/pin.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .polaroid_img {
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.polaroid_caption span {
+    display: block;
+}
+
+.polaroid_date {
+    font-family: "Sometype Mono", monospace;
+    font-size: 1rem;
+    color: gray;
+}
+
+.polaroid_title {
+    font-family: "Edu TAS Beginner", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    color: black;
 }

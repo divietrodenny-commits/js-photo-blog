@@ -37,3 +37,30 @@
         "url": "https://marcolanci.it/boolean/assets/pictures/6.png"
     }
 ] */
+const rowElement = document.querySelector('.row');
+
+fetch('https://lanciweb.github.io/demo/api/pictures/')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        data.forEach(foto => {
+            const col = document.createElement('div');
+            col.className = 'col-md-6 col-lg-4';
+
+            col.innerHTML = `
+        <div class="polaroid_inner">
+          <img src="${foto.url}" alt="${foto.title}" class="polaroid_img">
+          <p class="polaroid_caption">
+            <span class="polaroid_date">${foto.date}</span>
+            <span class="polaroid_title">${foto.title}</span>
+          </p>
+        </div>
+      `;
+
+            rowElement.appendChild(col);
+        });
+        
+    })
+
+
