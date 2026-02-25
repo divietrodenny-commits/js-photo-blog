@@ -1,34 +1,57 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Sometype Mono", monospace;
+  font-family: "Sometype Mono", monospace;
 }
 
-/* Header */
 .top_bar {
-    text-align: center;
-    padding: 30px;
-    background-color: #dcdddd;
-    font-weight: bold;
+  text-align: center;
+  padding: 30px;
+  background-image: url("img/wall.png");
+  font-weight: bold;
 }
 
 .top_bar h1 {
-    font-family: 'Edu TAS Beginner', sans-serif;
-    font-weight: 600;
-    font-size: 3rem;
-    letter-spacing: 3px;
-   
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 3px;
 }
 
-/* Board con sfondo di sughero */
 .board {
-    min-height: 100vh;
-    background-image: url("img/cork.png");
-    background-size: cover;
-    background-position: center;
-    padding: 60px 0;
+  min-height: 100vh;
+  background-image: url("img/cork.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0 40px;
+}
+
+.board_container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;          
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.polaroid_inner {
+  background-color: white;
+  width: 320px;
+  margin: 40px auto 0;    
+  padding: 20px 20px 30px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.polaroid_img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
