@@ -94,3 +94,10 @@ body {
     text-transform: uppercase;
     color: black;
 }
+
+.overlay {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
