@@ -63,4 +63,12 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
         
     })
 
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const overlayId = document.getElementById('overlay');         
+  const overlayImg = document.getElementById('overlay_img');   
+  const closeBtn = document.querySelector('.close_btn');       
+  const polaroids = document.querySelectorAll('.polaroid');
 
+  
+ });

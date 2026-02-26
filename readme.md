@@ -58,3 +58,4 @@ Spostandosi col mouse sopra le foto, queste si zoommano, ruotano di 10 gradi e l
 |||
 
 tools: getElementById, queryselector, addeventlistener, function, foreach ???
+creo overlay su html, lo richiamo su js e quando clicco apre l'overley impostando su disdplay block e quando si clicca la x torna a display none. 
