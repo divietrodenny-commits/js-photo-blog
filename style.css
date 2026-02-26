@@ -100,7 +100,7 @@ body {
   position: fixed;
   z-index: 1000;
   inset: 0;                  
-  background-color: transparent
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .overlay_content {
@@ -117,21 +117,22 @@ body {
 #overlay_img {
   width: 100%;
   height: auto;
-  max-width: 600px; 
+  max-width: 500px; 
   max-height: 80vh;  
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
   margin: 0 auto;
   display: block;
 }
 
 .close_btn {
   position: absolute;
-  top: -50px;
-  right: 0;
-  color: white;
-  font-size: 40px;
+  top: -35px;       
+  left: 50%;          
+  transform: translateX(-50%);
+  color: black;
+  background-color: white;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
@@ -141,5 +142,5 @@ body {
 
 .close_btn:hover {
   color: #ccc;
-  transform: scale(1.1);
+  transform: translateX(-50%) scale(1.1);  
 }

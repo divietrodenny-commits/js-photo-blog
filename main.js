@@ -79,4 +79,16 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
             });
         });
     })
-    
+    .catch(err => {
+        console.error('Errore nel fetch delle foto:', err);
+    });
+
+closeBtn.addEventListener('click', function () {
+    overlayId.style.display = 'none';
+});
+
+overlayId.addEventListener('click', function (event) {
+    if (event.target === overlayId) {
+        overlayId.style.display = 'none';
+    }
+});
