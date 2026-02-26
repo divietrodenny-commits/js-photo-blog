@@ -46,12 +46,8 @@ body {
 }
 */
 .polaroid {
-  cursor: pointer;  
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.polaroid:hover {
-  transform: translateY(-10px) rotate(8deg); 
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 
@@ -61,6 +57,15 @@ body {
     margin: 0 auto 0;
     padding: 20px 20px 5px;
     position: relative;
+    box-shadow: none;  
+}
+
+.polaroid:hover {
+    transform: translateY(-4px) scale(1.04) rotate(4deg);
+}
+
+.polaroid:hover .polaroid_inner {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.9); 
 }
 
 .polaroid_inner::before {
@@ -105,51 +110,51 @@ body {
 }
 
 .overlay {
-  display: none;            
-  position: fixed;
-  z-index: 1000;
-  inset: 0;                  
-  background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .overlay_content {
-  position: relative;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 800px;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: fadeIn 0.3s ease;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 0.3s ease;
 }
 
 #overlay_img {
-  width: 100%;
-  height: auto;
-  max-width: 500px; 
-  max-height: 80vh;  
-  object-fit: contain;
-  border-radius: 8px;
-  margin: 0 auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
 }
 
 .close_btn {
-  position: absolute;
-  top: -35px;       
-  left: 50%;          
-  transform: translateX(-50%);
-  color: black;
-  background-color: white;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  line-height: 1;
-  user-select: none;
-  z-index: 1001;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    user-select: none;
+    z-index: 1001;
 }
 
 .close_btn:hover {
-  color: #ccc;
-  transform: translateX(-50%) scale(1.1);  
+    color: #ccc;
+    transform: translateX(-50%) scale(1.1);
 }
