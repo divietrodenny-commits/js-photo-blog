@@ -38,6 +38,9 @@
     }
 ] */
 const rowElement = document.querySelector('.row');
+const overlayId = document.getElementById('overlay');
+const overlayImg = document.getElementById('overlay_img');
+const closeBtn = document.querySelector('.close_btn');
 
 fetch('https://lanciweb.github.io/demo/api/pictures/')
     .then(response => response.json())
@@ -49,26 +52,31 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
             col.className = 'col-md-6 col-lg-4';
 
             col.innerHTML = `
-        <div class="polaroid_inner">
-          <img src="${foto.url}" alt="${foto.title}" class="polaroid_img">
-          <p class="polaroid_caption">
-            <span class="polaroid_date">${foto.date}</span>
-            <span class="polaroid_title">${foto.title}</span>
-          </p>
+        <div class="polaroid">
+          <div class="polaroid_inner">
+            <img src="${foto.url}" alt="${foto.title}" class="polaroid_img">
+            <p class="polaroid_caption">
+              <span class="polaroid_date">${foto.date}</span>
+              <span class="polaroid_title">${foto.title}</span>
+            </p>
+          </div>
         </div>
       `;
 
             rowElement.appendChild(col);
         });
-        
+
+        const polaroids = document.querySelectorAll('.polaroid');
+
+        polaroids.forEach(function (polaroid) {
+            polaroid.addEventListener('click', function () {
+                const img = this.querySelector('.polaroid_img');
+                const src = img.dataset.src || img.src;
+
+                overlayImg.src = src;
+                overlayImg.alt = img.alt;
+                overlayId.style.display = 'block';
+            });
+        });
     })
-
-document.addEventListener('DOMContentLoaded', function() {
-  
-  const overlayId = document.getElementById('overlay');         
-  const overlayImg = document.getElementById('overlay_img');   
-  const closeBtn = document.querySelector('.close_btn');       
-  const polaroids = document.querySelectorAll('.polaroid');
-
-  
- });
+    
